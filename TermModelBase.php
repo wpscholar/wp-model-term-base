@@ -28,4 +28,15 @@ abstract class TermModelBase {
 		$this->term = $term;
 	}
 
+	/**
+	 * Create a new instance
+	 *
+	 * @param \WP_Term $term
+	 *
+	 * @return static
+	 */
+	public static function create( \WP_Post $term ) {
+		return new static( $term );
+	}
+
 }
